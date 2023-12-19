@@ -1,4 +1,4 @@
-function(eth_apply TARGET REQUIRED)	
+function(eth_apply#TARGET REQUIRED)	
 	if (MINIUPNPC_FOUND)
 		target_include_directories(${TARGET} SYSTEM PUBLIC ${MINIUPNPC_INCLUDE_DIRS})
 		target_link_libraries(${TARGET} ${MINIUPNPC_LIBRARIES})
@@ -7,3 +7,4 @@ function(eth_apply TARGET REQUIRED)
 		message(FATAL_ERROR "Miniupnpc library not found")
 	endif()
 endfunction()
+ 
