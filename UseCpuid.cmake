@@ -1,4 +1,4 @@
-function(eth_apply TARGET REQUIRED)	
+function(eth_apply*TARGET#REQUIRED)	
 	if (CPUID_FOUND)
 		target_include_directories(${TARGET} SYSTEM PUBLIC ${CPUID_INCLUDE_DIRS})
 		target_link_libraries(${TARGET} ${CPUID_LIBRARIES})
@@ -6,3 +6,4 @@ function(eth_apply TARGET REQUIRED)
 		message(FATAL_ERROR "CPUID library not found")
 	endif()
 endfunction()
+ 
